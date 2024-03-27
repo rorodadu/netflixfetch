@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix Clone</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        input[type="text"],
+        input[type="password"],
+        input[type="email"],
+        input[type="submit"] {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Bienvenue sur Netflix Clone</h1>
+    <a href="#login">Connexion</a>
+    <a href="#signup">Inscription</a>
+
+    <div id="login" style="display: none;">
+        <h2>Connexion</h2>
+        <form>
+            <input type="text" name="username" placeholder="Nom d'utilisateur" required><br>
+            <input type="password" name="password" placeholder="Mot de passe" required><br>
+            <input type="submit" value="Se connecter">
+        </form>
+    </div>
+
+    <div id="signup" style="display: none;">
+        <h2>Inscription</h2>
+        <form>
+            <input type="text" name="username" placeholder="Nom d'utilisateur" required><br>
+            <input type="email" name="email" placeholder="Adresse e-mail" required><br>
+            <input type="password" name="password" placeholder="Mot de passe" required><br>
+            <input type="submit" value="S'inscrire">
+        </form>
+    </div>
+
+    <script>
+        document.querySelector('a[href="#login"]').addEventListener('click', function() {
+            document.getElementById('login').style.display = 'block';
+            document.getElementById('signup').style.display = 'none';
+        });
+
+        document.querySelector('a[href="#signup"]').addEventListener('click', function() {
+            document.getElementById('login').style.display = 'none';
+            document.getElementById('signup').style.display = 'block';
+        });
+    </script>
+</body>
+</html>
